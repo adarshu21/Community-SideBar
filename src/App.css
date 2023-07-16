@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  background-image: url("/home/adarsh/Downloads/react-side-bar/wp.jpeg");
+  z-index:1;
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=18b0d6&c2=204fdb&gt=l&gd=dcr
+  */
+  background: #FDE7F9;
+  background: linear-gradient(270deg, #18B0D6, #204FDB);
+}
+
+main {
+  padding: 10px;
+}
+
+.title {
+  font-size: 4rem; /* Increased font size */
+  display: grid;
+  place-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgba(21, 87, 187, 0.925);
+  color: white;
+  min-height: 100vh; /* Adjusted height */
+  overflow-y: auto;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 10px; /* Adjusted padding */
+  background: linear-gradient(to top, #209cff 0%, #68e0cf 100%); /* Added gradient background */
+  color: black; /* Set font color to black */
+  font-weight: bold; /* Set font weight to bold */
+}
+
+.logo {
+  font-size: 24px; /* Increased font size */
+  line-height: 0;
+}
+
+.bars {
+  width: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 25px 0; /* Increased margin */
+  height: 60px; /* Increased height */
+  padding: 20px; /* Increased padding */
+}
+
+.search input {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+  color: white;
+}
+
+.routes {
+  margin-top: 35px; /* Increased margin-top */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap */
+}
+
+.link {
+  display: flex;
+  color: white;
+  gap: 20px; /* Increased gap */
+  padding: 20px 10px; /* Adjusted padding */
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.link:hover {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.active {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+}
+
+.link_text {
+  white-space: nowrap;
+  font-size: 20px; /* Increased font size */
+}
+
+.menu {
+  display: flex;
+  color: white;
+  padding: 20px 10px; /* Adjusted padding */
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+}
+
+.menu_item {
+  display: flex;
+  gap: 20px; /* Increased gap */
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_container .link {
+  padding-left: 30px; /* Increased padding-left */
+  border-bottom: #fff 0.5px solid;
+}
