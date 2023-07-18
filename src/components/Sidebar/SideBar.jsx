@@ -8,6 +8,7 @@ import { BsCartCheck } from "react-icons/bs";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+
 const routes = [
   {
     path: "/",
@@ -15,48 +16,20 @@ const routes = [
     icon: <FaHome />,
   },
   {
-    path: "/users",
-    name: "Feed",
-    icon: <FaUser />,
-  },
-  {
     path: "/messages",
-   name: "Service",
+    name: "Service",
     icon: <MdMessage />,
   },
   {
     path: "/analytics",
-   name: "Events",
+    name: "Events",
     icon: <BiAnalyse />,
   },
-  // {
-  //   path: "/file-manager",
-  //   name: "Monetize",
-  //   icon: <AiTwotoneFileExclamation />,
-  //   subRoutes: [
-  //     {
-  //       path: "/settings/profile",
-  //       name: "Profile ",
-  //       icon: <FaUser />,
-  //     },
-  //     {
-  //       path: "/settings/2fa",
-  //       name: "2FA",
-  //       icon: <FaLock />,
-  //     },
-  //     {
-  //       path: "/settings/billing",
-  //       name: "Billing",
-  //       icon: <FaMoneyBill />,
-  //     },
-  //   ],
-  // },
   {
     path: "/order",
     name: "Monetize",
     icon: <BsCartCheck />,
   },
- 
   {
     path: "/saved",
     name: "Saved",
@@ -107,7 +80,6 @@ const SideBar = ({ children }) => {
         <motion.div
           animate={{
             width: isOpen ? "200px" : "45px",
-
             transition: {
               duration: 0.5,
               type: "spring",
@@ -126,7 +98,7 @@ const SideBar = ({ children }) => {
                   exit="hidden"
                   className="logo"
                 >
-                  DoSomeCoding
+                  Commune
                 </motion.h1>
               )}
             </AnimatePresence>
@@ -154,17 +126,6 @@ const SideBar = ({ children }) => {
           </div>
           <section className="routes">
             {routes.map((route, index) => {
-              if (route.subRoutes) {
-                return (
-                  <SidebarMenu
-                    setIsOpen={setIsOpen}
-                    route={route}
-                    showAnimation={showAnimation}
-                    isOpen={isOpen}
-                  />
-                );
-              }
-
               return (
                 <NavLink
                   to={route.path}
@@ -192,8 +153,64 @@ const SideBar = ({ children }) => {
           </section>
         </motion.div>
 
-        <main style={{ backgroundImage: `url("/home/adarsh/Downloads/react-side-bar/wp.jpeg")` }}></main>
+        <main>
+          <div className="button-container">
+            <a
+              href="https://bobdao.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                className="button"
+                style={{
+                  width: "600px",
+                  height: "480px",
+                  margin: "120px",
+                  backgroundImage: "url('https://bobdao.in/assets/poster.7b4f2257.jpeg')",
+                }}
+              >
+                Button 1
+              </button>
+            </a>
+            <a
+              href="https://www.lumoslabs.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                className="button"
+                style={{
+                  width: "600px",
+                  height: "480px",
+                  margin: "120px",
+
+                  backgroundImage: "url('https://viestories.com/wp-content/uploads/2022/05/A-12.jpg')",
+                }}
+              >
+                Button 2
+              </button>
+            </a>
+          </div>
+        </main>
       </div>
+
+      <style>
+        {`
+          .button-container {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .button {
+            /* Add your button styles here */
+            /* Example styles */
+            width: 600px;
+            height: 480px;
+            background-size: cover;
+            background-position: center;
+          }
+        `}
+      </style>
     </>
   );
 };

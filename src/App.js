@@ -9,28 +9,28 @@ import Analytics from "./pages/Analytics";
 import Order from "./pages/Order";
 import Saved from "./pages/Saved";
 import Setting from "./pages/Setting";
-import CommunityProfile from "./components/CommunityProfile";
 
 
 function App() {
+
   return (
+    <>
     <Router>
+      
       <SideBar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/manage" element={<Users />} />
-          <Route path="/feed" element={<Messages />} />
-          <Route path="/service" element={<Analytics />} />
-          <Route path="/events" element={<FileManager />} />
-          <Route path="/monetize" element={<Order />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/filemanager" element={<FileManager />} />
+          <Route path="/order" element={<Order />} />
           <Route path="/settings" element={<Setting />} />
           <Route path="*" element={<> not found</>} />
-        </Routes>
+       </Routes>
       </SideBar>
-      <div>
-        <CommunityProfile />
-      </div>
-    </Router>
+     </Router>
+    </>
   );
 }
 

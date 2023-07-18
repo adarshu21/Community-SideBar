@@ -14,10 +14,12 @@
   */
   background: #FDE7F9;
   background: linear-gradient(270deg, #18B0D6, #204FDB);
+  
 }
 
 main {
   padding: 10px;
+  width: 30px;
 }
 
 .title {
@@ -32,13 +34,16 @@ main {
   color: white;
   min-height: 100vh; /* Adjusted height */
   overflow-y: auto;
+  width: 100px;
+  
+
 }
 
 .top_section {
   display: flex;
-  align-items: center;
+  align-items:start;
   justify-content: space-between;
-  padding: 35px 10px; /* Adjusted padding */
+  padding: 35px 0px; /* Adjusted padding */
   background: linear-gradient(to top, #209cff 0%, #68e0cf 100%); /* Added gradient background */
   color: black; /* Set font color to black */
   font-weight: bold; /* Set font weight to bold */
@@ -50,7 +55,7 @@ main {
 }
 
 .bars {
-  width: 30px;
+  width: 70px;
 }
 
 .hide {
@@ -60,14 +65,14 @@ main {
 .search {
   display: flex;
   align-items: center;
-  margin: 25px 0; /* Increased margin */
+  margin: 5px 0; /* Increased margin */
   height: 60px; /* Increased height */
-  padding: 20px; /* Increased padding */
+  padding: 5px; /* Increased padding */
 }
 
 .search input {
   border: none;
-  margin-left: 10px;
+  margin-left: 2px;
   border-radius: 5px;
   background: rgb(238, 238, 238);
   color: white;
@@ -127,4 +132,5 @@ main {
 .menu_container .link {
   padding-left: 30px; /* Increased padding-left */
   border-bottom: #fff 0.5px solid;
+
 }
