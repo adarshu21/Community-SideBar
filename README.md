@@ -1,1 +1,1 @@
-# REACT SIDE BAR DROPDOWN MENU USING FRAMER MOTION
+# community launch page after the main website
